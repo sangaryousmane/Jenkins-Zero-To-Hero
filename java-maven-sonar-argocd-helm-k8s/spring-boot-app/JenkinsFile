@@ -59,7 +59,7 @@ pipeline {
                     sed -i "s/replaceImageTag/${BUILD_NUMBER}/g" java-maven-sonar-argocd-helm-k8s/spring-boot-app-manifests/deployment.yml
                     git add java-maven-sonar-argocd-helm-k8s/spring-boot-app-manifests/deployment.yml
                     git commit -m "Update deployment image to version ${BUILD_NUMBER}"
-                    git push https://${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}@github.com/sangaryousmane/Jenkins-Zero-To-Hero.git HEAD:main
+                    git push https://{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}@github.com/sangaryousmane/Jenkins-Zero-To-Hero.git HEAD:main
                 '''
             }
         }
