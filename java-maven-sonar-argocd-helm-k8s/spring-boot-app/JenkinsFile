@@ -57,7 +57,7 @@ pipeline {
                     git config user.name "Ousmane Sangary"
                     BUILD_NUMBER=${BUILD_NUMBER}
                     sed -i "s|image: ousmane1999/jenkins-cicd:.*|image: ousmane1999/jenkins-cicd:${BUILD_NUMBER}|" java-maven-sonar-argocd-helm-k8s/spring-boot-app-manifests/deployment.yml
-                    git add java-maven-sonar-argocd-helm-k8s/spring-boot-app-manifests/deployment.yml
+                    git add .
                     git commit -m "Update deployment image to version ${BUILD_NUMBER}"
                     git push https://${GITHUB_TOKEN}@github.com/${GIT_USER_NAME}/${GIT_REPO_NAME} HEAD:main
                 '''
